@@ -4,16 +4,16 @@ import com.sapient.DbsEngine.Goal;
 import com.sapient.DbsEngine.Goal3;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class App 
 {
-	static Scanner sc=new Scanner(System.in);
+	
     public static void main( String[] args )
     {
     		 Goal g1=new Goal();
     		 System.out.println("Enter the query:");
-    		 String  query= sc.nextLine();
+    		 String  query="select venue , umire1 from ipl.csv where id = 20 and season=2008 group by team1";
     		 ArrayList<String> token=g1.token1(query);		 
     		 //task1
     		 g1.fname(query);
