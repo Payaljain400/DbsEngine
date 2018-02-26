@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 class Testing {
 
 	 @Test
+	 	// Testing the token1 function in Goal class
 	    public void check1() {
 	    	Goal obj2=new Goal();
 			String name="select venue from ipl.csv";
@@ -16,7 +17,7 @@ class Testing {
 			resulttoken1.add("venue");
 			resulttoken1.add("from");
 			resulttoken1.add("ipl.csv");
-			assertEquals(resulttoken1,obj2.token1(name));
+			assertEquals(resulttoken1,obj2.token(name));
 	    }
 	    @Test
 		public void check2(){		

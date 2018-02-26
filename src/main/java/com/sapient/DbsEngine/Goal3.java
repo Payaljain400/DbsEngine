@@ -3,16 +3,16 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class Goal3 {
+	//Function to find the data type of each field
 	public void goalHead() {
-	       String csvFile = "ipl.csv";
+	        String csvFile = "ipl.csv";
 	        BufferedReader br = null;
 	        String csvSplitBy = ",";
-
 	        try {
 	        	String strArray[] = new String[18];
 	        	String strArray1[] = new String[18];
-             String heading=null;
-             String type=null;
+                String heading=null;
+                String type=null;
 	            br = new BufferedReader(new FileReader(csvFile));
 	            heading = br.readLine();
 	            type = br.readLine();
@@ -28,13 +28,13 @@ public class Goal3 {
 	            	}
 	            	catch(NumberFormatException e)
 	            	{
-	            	Pattern p=Pattern.compile("[0-9]+-[0-9]+-[0-9]+");
-	            	Matcher m= p.matcher(strArray1[i]);
-	            	Boolean a=m.matches();
-	            	if(a.equals(true))
-	            	System.out.println("It is of Date type");
-	            	else
-	            	System.out.println("It is of String type");
+	            		Pattern p=Pattern.compile("[0-9]+-[0-9]+-[0-9]+");
+	            		Matcher m= p.matcher(strArray1[i]);
+	            		Boolean a=m.matches();
+	            		if(a.equals(true))
+	            			System.out.println("It is of Date type");
+	            		else
+	            			System.out.println("It is of String type");
 	            	}
 	            	catch(ArrayIndexOutOfBoundsException e)
 	            	{
